@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.CommunityToolkit.UI.Views;
 
 namespace Testing1234
 {
@@ -19,6 +20,11 @@ namespace Testing1234
         {
             
             camera.Shutter();
+        }
+
+        void Button_Clicked_1(System.Object sender, System.EventArgs e)
+        {
+            camera.CameraOptions = camera.CameraOptions == CameraOptions.Back ? CameraOptions.Front : CameraOptions.Back;
         }
     }
 }
